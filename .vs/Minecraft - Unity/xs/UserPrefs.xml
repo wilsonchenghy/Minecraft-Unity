@@ -5,17 +5,17 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Minecraft-Unity/Assets/CubeData.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CubeData.cs">
     <Files>
-      <File FileName="../Minecraft-Unity/Assets/CubeData.cs" Line="16" Column="26" />
-      <File FileName="Assets/CubeData.cs" Line="13" Column="39" />
+      <File FileName="Assets/CubeData.cs" Line="27" Column="22" />
+      <File FileName="Assets/Cube.cs" Line="14" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Minecraft - Unity" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Cube.cs" selected="True" />
+              <Node name="CubeData.cs" selected="True" />
             </Node>
           </Node>
         </State>

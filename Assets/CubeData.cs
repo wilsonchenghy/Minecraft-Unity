@@ -10,7 +10,7 @@ public static class CubeData
         new Vector3(1.0f, 0.0f, 0.0f),
         new Vector3(1.0f, 1.0f, 0.0f),
         new Vector3(0.0f, 1.0f, 0.0f),
-        new Vector3(1.0f, 0.0f, 1.0f),
+        new Vector3(0.0f, 0.0f, 1.0f),
         new Vector3(1.0f, 0.0f, 1.0f),
         new Vector3(1.0f, 1.0f, 1.0f),
         new Vector3(0.0f, 1.0f, 1.0f),
@@ -19,16 +19,16 @@ public static class CubeData
     public static int[,] orderOfVerticesForDrawingTriangle = new int[6, 6]
     {
         // bottom face
-        {0, 1, 2, 2, 3, 0},
+        {3, 2, 1, 1, 0, 3},
         // left face
-        {4, 0, 3, 3, 4, 7},
+        {3, 0, 4, 4, 7, 3},
         // back face
-        {7, 3, 2, 2, 6, 7},
+        {2, 3, 7, 7, 6, 2},
         // right face
-        {5, 1, 2, 2, 6, 5},
+        {1, 2, 6, 6, 3, 1},
         // front face
-        {4, 0, 1, 1, 5, 4},
+        {0, 1, 5, 5, 4, 0},
         // top face
-        {7, 4, 5, 5, 6, 7}
+        {4, 5, 6, 6, 7, 4}
     };
 }
