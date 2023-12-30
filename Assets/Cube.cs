@@ -26,9 +26,9 @@ public class Cube : MonoBehaviour
     {
         int vertexIndex = 0;
 
-        for (int i=0; i<6; i++)
+        for (int i= 0; i < 6; i++)
         {
-            for (int j=0; j<6; j++)
+            for (int j = 0; j < 6; j++)
             {
                 int indexForTheCorrespondingVertices = CubeData.orderOfVerticesForDrawingTriangle[i,j];
                 vertices.Add(CubeData.cubeVertices[indexForTheCorrespondingVertices]); // in the correct order add the vertices points into the list

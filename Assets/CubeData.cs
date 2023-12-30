@@ -25,7 +25,7 @@ public static class CubeData
         // back face
         {2, 3, 7, 7, 6, 2},
         // right face
-        {1, 2, 6, 6, 3, 1},
+        {1, 2, 6, 6, 5, 1},
         // front face
         {0, 1, 5, 5, 4, 0},
         // top face
