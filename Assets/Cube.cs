@@ -7,14 +7,16 @@ public class Cube : MonoBehaviour
     public MeshFilter meshFilter;
     public MeshRenderer meshRenderer;
 
+    int vertexIndex = 0;
     List<Vector3> vertices = new List<Vector3>();
     List<int> triangles = new List<int>();
     List<Vector2> uvMap = new List<Vector2>();
 
 
+
     void Start()
     {
-        fillArraysWithData();
+        generatingCubes();
         createMesh();
 
         // print to console
@@ -22,24 +24,39 @@ public class Cube : MonoBehaviour
     }
 
 
-    void fillArraysWithData()
-    {
-        int vertexIndex = 0;
 
-        for (int i= 0; i < 6; i++)
+    void generatingCubes()
+    {
+        for (int x = 0; x < 5; x++)
+        {
+            for (int y = 0; y < 5; y++)
+            {
+                for (int z = 0; z < 5; z++)
+                {
+
+                    fillingCubeData(new Vector3(x, y, z));
+
+                }
+            }
+        }
+    }
+
+
+    void fillingCubeData(Vector3 cubeTranslation)
+    {
+
+        for (int i = 0; i < 6; i++)
         {
             for (int j = 0; j < 6; j++)
             {
                 int indexForTheCorrespondingVertices = CubeData.orderOfVerticesForDrawingTriangle[i,j];
-                vertices.Add(CubeData.cubeVertices[indexForTheCorrespondingVertices]); // in the correct order add the vertices points into the list
+                vertices.Add(CubeData.cubeVertices[indexForTheCorrespondingVertices]+ cubeTranslation); // in the correct order add the vertices points into the list
                 triangles.Add(vertexIndex);
                 uvMap.Add(Vector2.zero);
 
                 vertexIndex += 1; //total add 12 times for the 12 vertices generated
             }
         }
-
-        Debug.Log("Assigned");
     }
 
 
