@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/CubeData.cs" />
+    <Compile Include="Assets/Chunk.cs" />
     <Compile Include="Assets/Cube.cs" />
   </ItemGroup>
   <ItemGroup>

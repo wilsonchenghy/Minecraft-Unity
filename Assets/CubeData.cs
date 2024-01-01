@@ -4,6 +4,10 @@ using UnityEngine;
 
 public static class CubeData
 {
+    public static int chunkHeight = 3;
+    public static int chunkWidth = 3;
+    public static int chunkLength = 3;
+
     public static Vector3[] cubeVertices = new Vector3[8]
     {
         new Vector3(0.0f, 0.0f, 0.0f),
@@ -30,5 +34,15 @@ public static class CubeData
         {0, 1, 5, 5, 4, 0},
         // top face
         {4, 5, 6, 6, 7, 4}
+    };
+
+    public static Vector3[] faceChecks = new Vector3[6]
+    {
+        new Vector3(0.0f, 0.0f, -1.0f),
+        new Vector3(-1.0f, 0.0f, 0.0f),
+        new Vector3(0.0f, 1.0f, 0.0f),
+        new Vector3(1.0f, 0.0f, 0.0f),
+        new Vector3(0.0f, -1.0f, 0.0f),
+        new Vector3(0.0f, 0.0f, 1.0f)
     };
 }
