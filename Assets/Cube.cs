@@ -42,19 +42,19 @@
 //    }
 
 
-//    void fillingCubeData(Vector3 cubeTranslation)
+//    void fillingCubeData(Vector3 cubePosition)
 //    {
 
 //        for (int i = 0; i < 6; i++)
 //        {
 //            for (int j = 0; j < 6; j++)
 //            {
-//                int indexForTheCorrespondingVertices = CubeData.orderOfVerticesForDrawingTriangle[i,j];
-//                vertices.Add(CubeData.cubeVertices[indexForTheCorrespondingVertices]+ cubeTranslation); // in the correct order add the vertices points into the list
+//                int indexForTheCorrespondingVertices = CubeData.orderOfVerticesForDrawingTriangle_ForCube[i, j];
+//                vertices.Add(CubeData.cubeVertices[indexForTheCorrespondingVertices] + cubePosition); // in the correct order add the vertices points into the list
 //                triangles.Add(vertexIndex);
 //                uvMap.Add(Vector2.zero);
 
-//                vertexIndex += 1; //total add 12 times for the 12 vertices generated
+//                vertexIndex += 1; //total add 36 times for the 36 vertices generated
 //            }
 //        }
 //    }

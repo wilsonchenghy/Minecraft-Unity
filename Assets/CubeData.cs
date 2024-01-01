@@ -20,7 +20,7 @@ public static class CubeData
         new Vector3(0.0f, 1.0f, 1.0f),
     };
 
-    public static int[,] orderOfVerticesForDrawingTriangle = new int[6, 6]
+    public static int[,] orderOfVerticesForDrawingTriangle_ForCube = new int[6, 6]
     {
         // bottom face
         {3, 2, 1, 1, 0, 3},
@@ -34,6 +34,22 @@ public static class CubeData
         {0, 1, 5, 5, 4, 0},
         // top face
         {4, 5, 6, 6, 7, 4}
+    };
+
+    public static int[,] orderOfVerticesForDrawingTriangle_ForChunk = new int[6, 4]
+    {
+        // bottom face
+        {3, 2, 1, 0},
+        // left face
+        {3, 0, 4, 7},
+        // back face
+        {2, 3, 7, 6},
+        // right face
+        {1, 2, 6, 5},
+        // front face
+        {0, 1, 5, 4},
+        // top face
+        {4, 5, 6, 7}
     };
 
     public static Vector3[] faceChecks = new Vector3[6]

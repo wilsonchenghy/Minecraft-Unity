@@ -46,7 +46,7 @@ public class Chunk : MonoBehaviour
         int x = Mathf.FloorToInt(checkingPosition.x);
         int y = Mathf.FloorToInt(checkingPosition.y);
         int z = Mathf.FloorToInt(checkingPosition.z);
-        if (x<0 || y<0 || z<0 || (x+1) > CubeData.chunkLength || (y+1) > CubeData.chunkHeight || (z+1) > CubeData.chunkWidth)
+        if (x < 0 || y < 0 || z < 0 || (x + 1) > CubeData.chunkLength || (y + 1) > CubeData.chunkHeight || (z + 1) > CubeData.chunkWidth)
         {
             return true;
         }
@@ -62,16 +62,22 @@ public class Chunk : MonoBehaviour
         {
             if (checkFaceToBeRendered(cubePosition + CubeData.faceChecks[i]))
             {
-                for (int j = 0; j < 6; j++)
-                    {
-                        int indexForTheCorrespondingVertices = CubeData.orderOfVerticesForDrawingTriangle[i, j];
-                        vertices.Add(CubeData.cubeVertices[indexForTheCorrespondingVertices] + cubePosition); // in the correct order add the vertices points into the list
-                        triangles.Add(vertexIndex);
-                        uvMap.Add(Vector2.zero);
-
-                        vertexIndex += 1; //total add 12 times for the 12 vertices generated
-                    }
-            }   
+                vertices.Add(CubeData.cubeVertices[CubeData.orderOfVerticesForDrawingTriangle_ForChunk[i, 0]] + cubePosition);
+                vertices.Add(CubeData.cubeVertices[CubeData.orderOfVerticesForDrawingTriangle_ForChunk[i, 1]] + cubePosition);
+                vertices.Add(CubeData.cubeVertices[CubeData.orderOfVerticesForDrawingTriangle_ForChunk[i, 2]] + cubePosition);
+                vertices.Add(CubeData.cubeVertices[CubeData.orderOfVerticesForDrawingTriangle_ForChunk[i, 3]] + cubePosition);
+                uvMap.Add(Vector2.zero);
+                uvMap.Add(Vector2.zero);
+                uvMap.Add(Vector2.zero);
+                uvMap.Add(Vector2.zero);
+                triangles.Add(vertexIndex);
+                triangles.Add(vertexIndex + 1);
+                triangles.Add(vertexIndex + 2);
+                triangles.Add(vertexIndex + 2);
+                triangles.Add(vertexIndex + 3);
+                triangles.Add(vertexIndex);
+                vertexIndex += 4;//total 24 vertices index generated, 12 less verticies index generated, save 2*6 verticies with the 2 overlapped verticies for each side of a cube
+            }
         }
     }
 

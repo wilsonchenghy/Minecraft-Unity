@@ -497,6 +497,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshFilter: {fileID: 1253370959}
   meshRenderer: {fileID: 1253370958}
+  vertexIndex: 0
+  vertices: []
+  triangles: 
+  uvMap: []
 --- !u!4 &1253370961
 Transform:
   m_ObjectHideFlags: 0
@@ -545,10 +549,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshFilter: {fileID: 2052384239}
   meshRenderer: {fileID: 2052384238}
-  vertexIndex: 0
-  vertices: []
-  triangles: 
-  uvMap: []
 --- !u!4 &2052384237
 Transform:
   m_ObjectHideFlags: 0
