@@ -353,6 +353,7 @@
 "Assets/Chunk.cs"
 "Assets/Cube.cs"
 "Assets/CubeData.cs"
+"Assets/World.cs"
 -langversion:9.0
 
 /deterministic

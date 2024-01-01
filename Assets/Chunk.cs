@@ -70,6 +70,7 @@ public class Chunk : MonoBehaviour
                 uvMap.Add(Vector2.zero);
                 uvMap.Add(Vector2.zero);
                 uvMap.Add(Vector2.zero);
+                addTexture(0);
                 triangles.Add(vertexIndex);
                 triangles.Add(vertexIndex + 1);
                 triangles.Add(vertexIndex + 2);
@@ -79,6 +80,13 @@ public class Chunk : MonoBehaviour
                 vertexIndex += 4;//total 24 vertices index generated, 12 less verticies index generated, save 2*6 verticies with the 2 overlapped verticies for each side of a cube
             }
         }
+    }
+
+
+    void addTexture(int textureID)
+    {
+        // convert ID to coordinate
+
     }
 
 

@@ -61,6 +61,7 @@
     <Compile Include="Assets/CubeData.cs" />
     <Compile Include="Assets/Chunk.cs" />
     <Compile Include="Assets/Cube.cs" />
+    <Compile Include="Assets/World.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

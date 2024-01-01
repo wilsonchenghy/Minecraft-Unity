@@ -8,6 +8,9 @@ public static class CubeData
     public static int chunkWidth = 3;
     public static int chunkLength = 3;
 
+    public static float numOfBlockInTexture = 4.0f; //num of blocks in a row/column of the texture
+    public static float NormalisedBlockSizeInTexture = 1.0f/numOfBlockInTexture;
+
     public static Vector3[] cubeVertices = new Vector3[8]
     {
         new Vector3(0.0f, 0.0f, 0.0f),
@@ -60,5 +63,13 @@ public static class CubeData
         new Vector3(1.0f, 0.0f, 0.0f),
         new Vector3(0.0f, -1.0f, 0.0f),
         new Vector3(0.0f, 0.0f, 1.0f)
+    };
+
+    public static Vector2[] uvCoordinate = new Vector2[4]
+    {
+        new Vector2 (0.0f, 0.0f),
+        new Vector2 (1.0f, 0.0f),
+        new Vector2 (1.0f, 1.0f),
+        new Vector2 (0.0f, 1.0f)
     };
 }
