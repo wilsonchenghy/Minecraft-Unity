@@ -66,11 +66,11 @@ public class Chunk : MonoBehaviour
                 vertices.Add(CubeData.cubeVertices[CubeData.orderOfVerticesForDrawingTriangle_ForChunk[i, 1]] + cubePosition);
                 vertices.Add(CubeData.cubeVertices[CubeData.orderOfVerticesForDrawingTriangle_ForChunk[i, 2]] + cubePosition);
                 vertices.Add(CubeData.cubeVertices[CubeData.orderOfVerticesForDrawingTriangle_ForChunk[i, 3]] + cubePosition);
-                uvMap.Add(Vector2.zero);
-                uvMap.Add(Vector2.zero);
-                uvMap.Add(Vector2.zero);
-                uvMap.Add(Vector2.zero);
-                addTexture(0);
+                //uvMap.Add(Vector2.zero);
+                //uvMap.Add(Vector2.zero);
+                //uvMap.Add(Vector2.zero);
+                //uvMap.Add(Vector2.zero);
+                addTexture(13);
                 triangles.Add(vertexIndex);
                 triangles.Add(vertexIndex + 1);
                 triangles.Add(vertexIndex + 2);
@@ -85,7 +85,16 @@ public class Chunk : MonoBehaviour
 
     void addTexture(int textureID)
     {
-        // convert ID to coordinate
+        // convert ID to coordinate, it is the coordinate for the left bottom point
+        int y1 = textureID/CubeData.numOfBlockInTexture;
+        int x1 = (textureID - y1 * CubeData.numOfBlockInTexture);
+        float x = (float)x1*CubeData.NormalisedBlockSizeInTexture;
+        float y = (float)y1*CubeData.NormalisedBlockSizeInTexture;
+
+        uvMap.Add(new Vector2(x, y));
+        uvMap.Add(new Vector2(x + CubeData.NormalisedBlockSizeInTexture, y));
+        uvMap.Add(new Vector2(x + CubeData.NormalisedBlockSizeInTexture, y + CubeData.NormalisedBlockSizeInTexture));
+        uvMap.Add(new Vector2(x, y + CubeData.NormalisedBlockSizeInTexture));
 
     }
 
